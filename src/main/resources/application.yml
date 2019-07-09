@@ -1,0 +1,51 @@
+server:
+  port: 80
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 30Mb
+      max-request-size: 30Mb
+  application:
+    name: BaseProject
+
+  datasource:
+#    url: jdbc:mysql://119.29.170.125:3306/zone?useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/healthyquery?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: ENC(KcvL6ofBXlc6fJJYt+/jNA==) #服务器 root
+    password: ENC() #服务器
+#    password: ENC(K9pRX7d2QYy1I5pQxl6KdA==) #本地
+    driver-class-name: com.mysql.jdbc.Driver
+
+  redis:
+    host: ${MRBEARD_REDIS_HOST:119.29.170.125}
+    port: ${MRBEARD_REDIS_PORT:6379}
+    password: ${MRBEARD_REDIS_PASSWORD:12138}
+    timeout: 10000
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
+  thymeleaf:
+      prefix: classpath:/templates/
+      check-template-location: true
+      suffix: .html
+      encoding: UTF-8
+      mode: HTML
+      cache: false
+
+jasypt:
+  encryptor:
+      password: M@gebu&
+mybatis:
+#  config-location: classpath:/mybatis-config.xml
+#  typeAliasesPackage: cn.biosan
+#  mapperLocations: classpath:com/mrbeard/zone/**/*.xml
+
+customproperty:
+
+
+
+
