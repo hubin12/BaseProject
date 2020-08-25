@@ -1,0 +1,13 @@
+server:
+  port: 80
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 30
+      max-request-size: 30
+  application:
+    name: base-project
+
+
+
